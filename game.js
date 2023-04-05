@@ -3,23 +3,24 @@ var interval;
 var started = false;
 var time = 0;
 var words = [
-  "hat",
-  "sat",
-  "rat",
-  "that",
-  "mat",
-  "fat",
-  "bat",
-  "cat",
-  "hat",
-  "sat",
-  "rat",
-  "that",
-  "mat",
-  "fat",
-  "bat",
-  "cat",
+  "🐘",
+  "🍩",
+  "🛀",
+  "🚀",
+  "🐙",
+  "🎭",
+  "🎈",
+  "🎸",
+  "🐘",
+  "🍩",
+  "🛀",
+  "🚀",
+  "🐙",
+  "🎭",
+  "🎈",
+  "🎸",
 ];
+
 var ready = true;
 var numCompleted = 0;
 function shuffle() {
@@ -54,7 +55,7 @@ function wordsSetUp() {
     });
     cell.addEventListener("mouseleave", function () {
       if (this.completed == false && this.clicked == false)
-        this.style.background = "purple";
+        this.style.background = "#fe7968";
     });
     cell.addEventListener("click", function (ready) {
       if (ready == false) return;
@@ -90,7 +91,7 @@ function wordsSetUp() {
             ready = true;
             var table = document.querySelector("#matrix");
             table.style.border = "5px solid black ";
-          }, 500);
+          }, 150);
         }
       }
     });
@@ -115,7 +116,7 @@ function startTimer() {
 }
 
 function hide(cell) {
-  cell.style.backgroundColor = "purple";
+  cell.style.backgroundColor = "#fe7968";
   cell.innerHTML = "";
   cell.clicked = false;
 }
@@ -136,3 +137,7 @@ const startButton = document.getElementById("start");
 startButton.addEventListener("click", function () {
   start();
 });
+
+function restart() {
+  location.reload();
+}

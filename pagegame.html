@@ -23,11 +23,13 @@
     <link rel="stylesheet" href="game.css" />
   </head>
   <body>
+    <div class="text-center">
+      <h1>Welcome to Joseph Waldron's Matching Game</h1>
+      <h3>Press the Start button and match the characters</h3>
+    </div>
     <div class="row justify-content-center">
-      <div class="col-auto">
-        <button class="btn btn-primary btn-lg active btn-warning" id="start">
-          Start
-        </button>
+      <div class="col-auto text-center">
+        <button class="btn btn-primary btn-lg active" id="start">Start</button>
         <p id="timer"></p>
         <table class="table table-bordered table-responsive" id="matrix">
           <tr>
@@ -55,8 +57,16 @@
             <td id="a44"></td>
           </tr>
         </table>
+        <button
+          class="btn btn-primary btn-lg active btn-success"
+          id="start"
+          onclick="restart();"
+        >
+          Restart
+        </button>
       </div>
     </div>
+
     <script src="game.js"></script>
   </body>
 </html>
