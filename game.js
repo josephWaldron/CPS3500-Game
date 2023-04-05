@@ -80,7 +80,7 @@ function wordsSetUp() {
           ready = false;
 
           var table = document.querySelector("#matrix");
-          table.style.border = "5px dashed red";
+          table.style.border = "5px dashed orange";
 
           setTimeout(function () {
             //after a 500ms delay
@@ -91,7 +91,7 @@ function wordsSetUp() {
             ready = true;
             var table = document.querySelector("#matrix");
             table.style.border = "5px solid black ";
-          }, 150);
+          }, 300);
         }
       }
     });
